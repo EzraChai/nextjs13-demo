@@ -1,7 +1,6 @@
 import NavBar from "./Navbar";
 import Image from "next/image";
 import BeachImage from "../public/beach.jpg";
-import Waves from "../public/waves.svg";
 import Reviews from "./Reviews";
 import { request } from "./lib/graphql-client";
 import Location from "./products/Location";

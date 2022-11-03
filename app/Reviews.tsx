@@ -1,6 +1,10 @@
 import ReviewCard from "./ReviewCard";
 
-export default async function Review({ data }: any) {
+function asyncComponent<T, R>(fn: (arg: T) => Promise<R>): (arg: T) => R {
+  return fn as (arg: T) => R;
+}
+
+const Review = asyncComponent(async ({ data }: any) => {
   return (
     <div className="pb-20 max-w-7xl mx-auto mt-[-2px]">
       <div className="">
@@ -17,4 +21,6 @@ export default async function Review({ data }: any) {
       </div>
     </div>
   );
-}
+});
+
+export default Review;
