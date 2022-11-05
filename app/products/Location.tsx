@@ -1,12 +1,12 @@
 export default function Location() {
   return (
-    <div className="mt-20 grid grid-cols-2 gap-12 py-20">
+    <div className="grid grid-cols-2 gap-12 py-20">
       <div className="mt-7">
-        <p className="text-3xl font-bold text-zinc-700">
+        <p className="text-2xl text-zinc-700">
           The{" "}
           <span className="text-5xl font-extrabold text-black">strategic</span>{" "}
           homestay in <br />
-          <div className="text-8xl mt-1 font-extrabold text-black">
+          <div className="text-[5rem] py-8 font-extrabold text-primary">
             Port Dickson
           </div>
         </p>

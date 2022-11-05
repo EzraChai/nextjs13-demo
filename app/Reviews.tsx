@@ -6,7 +6,7 @@ function asyncComponent<T, R>(fn: (arg: T) => Promise<R>): (arg: T) => R {
 
 const Review = asyncComponent(async ({ data }: any) => {
   return (
-    <div className="pb-20 max-w-7xl mx-auto mt-[-2px]">
+    <div className="pb-20 mt-[-2px]">
       <div className="">
         <h3 className="text-5xl font-extrabold">Reviews</h3>
         <p className="text-2xl text-zinc-600 mt-1">
@@ -15,7 +15,7 @@ const Review = asyncComponent(async ({ data }: any) => {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-6 py-10">
-        {data.data.allReviews.map((review: any) => (
+        {data?.data?.allReviews?.map((review: any) => (
           <ReviewCard review={review} key={review.id} />
         ))}
       </div>

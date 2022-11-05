@@ -1,12 +1,16 @@
 import Link from "next/link";
+import { SecondaryBookNowButton } from "./BookNowButton";
 
 export default function NavBar() {
   return (
-    <nav className="fixed w-full h-20 backdrop-blur-md bg-white/20">
-      <div className="flex justify-between max-w-7xl mx-auto">
-        <div className="py-6 text-2xl font-[800]">Cozy & Sweet.</div>
-        <div className="py-6 text-lg font-semibold text-zinc-600 hover:text-black transition">
-          <Link href="/products">Products</Link>
+    <nav className="fixed z-10 w-full h-20 backdrop-blur-md bg-white/20 shadow-md">
+      <div className="flex justify-between items-baseline max-w-7xl mx-auto">
+        <div className=" text-2xl font-[800]">Cozy & Sweet.</div>
+        <div className="mt-4 text-lg font-semibold text-zinc-600 hover:text-black transition flex items-baseline gap-4">
+          <Link className="" href="/products">
+            Products
+          </Link>
+          <SecondaryBookNowButton />
         </div>
       </div>
     </nav>
