@@ -17,7 +17,7 @@ export default function Book() {
           With your favourite platform.
         </div>
       </div>
-      <div className="">
+      <div>
         <div className="grid grid-cols-2 max-w-[70%] mx-auto gap-10">
           <Link
             target={"_blank"}
@@ -26,7 +26,12 @@ export default function Book() {
           >
             <div className=" justify-center items-center p-20">
               <div className="flex justify-center items-center">
-                <Image className="w-auto h-20" src={AirBnb} alt="Airbnb logo" />
+                <Image
+                  placeholder={"blur"}
+                  className="w-auto h-20"
+                  src={AirBnb}
+                  alt="Airbnb logo"
+                />
               </div>
             </div>
           </Link>
@@ -37,7 +42,11 @@ export default function Book() {
           >
             <div className=" justify-center items-center py-20 px-6">
               <div className="flex justify-center items-center mt-1">
-                <Image src={BookingDotCom} alt="Booking.com logo" />
+                <Image
+                  placeholder={"blur"}
+                  src={BookingDotCom}
+                  alt="Booking.com logo"
+                />
               </div>
             </div>
           </Link>
@@ -50,7 +59,12 @@ export default function Book() {
           >
             <div className=" justify-center items-center p-20">
               <div className="flex justify-center items-center">
-                <Image className="w-auto h-20" src={Agoda} alt="Agoda logo" />
+                <Image
+                  placeholder={"blur"}
+                  className="w-auto h-20"
+                  src={Agoda}
+                  alt="Agoda logo"
+                />
               </div>
             </div>
           </Link>
@@ -61,7 +75,11 @@ export default function Book() {
           >
             <div className=" justify-center items-center p-20">
               <div className="flex justify-center items-center">
-                <Image src={Whatsapp} alt="Whatsapp logo" />
+                <Image
+                  placeholder={"blur"}
+                  src={Whatsapp}
+                  alt="Whatsapp logo"
+                />
               </div>
             </div>
           </Link>
