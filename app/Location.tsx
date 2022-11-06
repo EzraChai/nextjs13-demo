@@ -2,14 +2,14 @@ export default function Location() {
   return (
     <div className="grid grid-cols-2 gap-12 py-20">
       <div className="mt-7">
-        <p className="text-2xl text-zinc-700">
+        <div className="text-2xl text-zinc-700">
           The{" "}
           <span className="text-5xl font-extrabold text-black">strategic</span>{" "}
           homestay in <br />
-          <div className="text-[5rem] py-8 font-extrabold text-primary">
+          <div className="text-[5rem] pt-6 pb-8 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500">
             Port Dickson
           </div>
-        </p>
+        </div>
         <div className="list mt-3 text-zinc-700 text-lg">
           <ul>
             <li>4 minutes to the beach</li>

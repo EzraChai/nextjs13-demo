@@ -3,28 +3,38 @@ import Image from "next/image";
 import BeachImage from "../public/beach.jpg";
 import Reviews from "./Reviews";
 import { request } from "./lib/graphql-client";
-import Location from "./products/Location";
+import Location from "./Location";
 import Mission from "./Mission";
 import Book from "./Booking";
 import { PrimaryBookNowButton } from "./BookNowButton";
+import OutsideHomestay from "./OutsideHomestay";
 
 async function getData() {
-  const GetAllReviews = await request(/* GraphQL */ `
-    query GetAllReviews {
+  const GetAllData = await request(/* GraphQL */ `
+    query GetAllData {
       allReviews {
         id
         customerName
         review
       }
+      allFacilities {
+        id
+        titleFacility
+        image {
+          url
+          height
+          width
+        }
+      }
     }
   `);
-  return GetAllReviews.json();
+  return GetAllData.json();
 }
 
 export default async function Home() {
-  const reviews = await getData();
+  const { data } = await getData();
   return (
-    <div>
+    <>
       <NavBar />
       <main className="max-w-7xl pt-32 mx-auto">
         <div className="text-center">
@@ -34,26 +44,24 @@ export default async function Home() {
           </p>
           <PrimaryBookNowButton />
         </div>
-
         <Image
           src={BeachImage}
           quality={50}
           alt="Architecture"
           placeholder="blur"
         />
-
         <Mission />
 
+        <OutsideHomestay data={data?.allFacilities} />
+
         <Location />
-
         <div className="mt-20">
-          <Reviews data={reviews} />
+          <Reviews data={data?.allReviews} />
         </div>
-
         <div id="book-now" className="pt-10">
           <Book />
         </div>
       </main>
-    </div>
+    </>
   );
 }

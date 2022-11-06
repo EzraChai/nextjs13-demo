@@ -8,7 +8,7 @@ export function PrimaryBookNowButton() {
           .getElementById("book-now")
           ?.scrollIntoView({ behavior: "smooth" })
       }
-      className="py-4 mb-32 px-6 bg-primary text-white font-bold text-xl hover:bg-secondary transition "
+      className="py-4 mb-32 px-6 bg-primary text-white  rounded-md font-bold text-xl hover:bg-secondary transition "
     >
       Book Now
     </button>
