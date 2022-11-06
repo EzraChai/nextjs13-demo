@@ -24,6 +24,7 @@ async function getData() {
           url
           height
           width
+          blurhash
         }
       }
     }
