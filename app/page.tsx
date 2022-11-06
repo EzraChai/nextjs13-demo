@@ -25,9 +25,7 @@ export default async function Home() {
   const reviews = await getData();
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <main className="max-w-7xl pt-32 mx-auto">
         <div className="text-center">
           <h1 className="pt-32 text-7xl font-[800]">C&S Homestay.</h1>
