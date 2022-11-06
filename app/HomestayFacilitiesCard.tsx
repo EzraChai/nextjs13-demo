@@ -5,6 +5,7 @@ import { GiBarbecue, GiElevator } from "react-icons/gi";
 import classNames from "classnames";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 
 export default function HomestayFacilitiesCard({ data }: any) {
   const [idFacility, setIdFacility] = useState<any>();
@@ -70,22 +71,27 @@ export default function HomestayFacilitiesCard({ data }: any) {
           </button>
         ))}
       </div>
-      {data?.map((facility: any) => (
-        <div
-          key={facility.id}
-          className={classNames(
-            idFacility !== facility.id && "hidden",
-            " w-auto h-[24rem] relative overflow-hidden"
-          )}
-        >
-          <Image
-            fill={true}
-            className=" object-cover"
-            src={facility.image.url}
-            alt={facility.image.title}
-          />
-        </div>
-      ))}
+      {data?.map(async (facility: any) => {
+        const { base64, img } = await getPlaiceholder(facility.image.url);
+        return (
+          <div
+            key={facility.id}
+            className={classNames(
+              idFacility !== facility.id && "hidden",
+              " w-auto h-[24rem] relative overflow-hidden"
+            )}
+          >
+            <Image
+              fill={true}
+              className=" object-cover"
+              src={img}
+              blurDataURL={base64}
+              placeholder={"blur"}
+              alt={facility.image.title}
+            />
+          </div>
+        );
+      })}
     </>
   );
 }
