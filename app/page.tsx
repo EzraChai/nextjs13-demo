@@ -24,7 +24,7 @@ async function getData() {
 export default async function Home() {
   const reviews = await getData();
   return (
-    <>
+    <div>
       <NavBar />
       <main className="max-w-7xl pt-32 mx-auto">
         <div className="text-center">
@@ -54,6 +54,6 @@ export default async function Home() {
           <Book />
         </div>
       </main>
-    </>
+    </div>
   );
 }
