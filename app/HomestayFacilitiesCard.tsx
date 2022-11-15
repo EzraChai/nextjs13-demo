@@ -3,15 +3,11 @@
 import { FaSwimmingPool } from "react-icons/fa";
 import { GiBarbecue, GiElevator } from "react-icons/gi";
 import classNames from "classnames";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 export default function HomestayFacilitiesCard({ data }: any) {
-  const [idFacility, setIdFacility] = useState<any>();
-
-  useEffect(() => {
-    setIdFacility(data[0].id);
-  }, []);
+  const [idFacility, setIdFacility] = useState<any>(data[0].id);
 
   return (
     <>
@@ -81,7 +77,7 @@ export default function HomestayFacilitiesCard({ data }: any) {
           >
             <Image
               fill={true}
-              className=" object-cover"
+              className=" object-cover rounded-lg overflow-hidden"
               src={facility.image.url}
               blurDataURL={facility.image.blurhash}
               placeholder={"blur"}
