@@ -1,8 +1,8 @@
 export default function ({ review }: any) {
   return (
-    <div className=" bg-white backdrop-blur-md p-10 transition">
-      <div className="card-header flex justify-between border-b-2 ">
-        <h3 className="font-[600] text-2xl text-primary pb-2">
+    <div className="group bg-white backdrop-blur-md p-10 transition rounded-lg hover:bg-red-100">
+      <div className="card-header flex justify-between">
+        <h3 className="font-extrabold text-2xl text-primary">
           {review.customerName}
         </h3>
       </div>

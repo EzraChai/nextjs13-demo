@@ -4,9 +4,11 @@ export default function Location() {
       <div className="mt-7">
         <div className="text-2xl text-zinc-700">
           The{" "}
-          <span className="text-5xl font-extrabold text-black">strategic</span>{" "}
+          <span className="text-5xl font-extrabold text-secondary">
+            strategic
+          </span>{" "}
           homestay in <br />
-          <div className="text-[5rem] pt-6 pb-8 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500">
+          <div className="text-[5rem] pt-6 pb-8 font-extrabold">
             Port Dickson
           </div>
         </div>

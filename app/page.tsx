@@ -8,6 +8,7 @@ import Mission from "./Mission";
 import Book from "./Booking";
 import { PrimaryBookNowButton } from "./BookNowButton";
 import OutsideHomestay from "./OutsideHomestay";
+import ContactMe from "./ContactMe";
 
 async function getData() {
   const GetAllData = await request(/* GraphQL */ `
@@ -40,7 +41,7 @@ export default async function Home() {
       <main className="max-w-7xl pt-32 mx-auto">
         <div className="text-center">
           <h1 className="pt-32 text-7xl font-[800]">C&S Homestay.</h1>
-          <p className="pt-4 pb-14 text-xl text-zinc-700">
+          <p className="text-2xl text-zinc-600 mt-4 mb-10">
             Cozy & Sweet Homestay is there for you to stay during your vacation.
           </p>
           <PrimaryBookNowButton />
@@ -63,6 +64,7 @@ export default async function Home() {
           <Book />
         </div>
       </main>
+      <ContactMe />
     </>
   );
 }

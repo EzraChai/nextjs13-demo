@@ -3,10 +3,10 @@ import ReviewCard from "./ReviewCard";
 
 const Review = asyncComponent(async ({ data }: any) => {
   return (
-    <div className="pb-20 mt-[-2px]">
+    <div className="py-10 mt-[-2px] ">
       <div>
-        <h3 className="text-5xl font-extrabold">Reviews</h3>
-        <p className="text-2xl text-zinc-600 mt-1">
+        <h3 className="text-5xl text-center font-extrabold">Reviews</h3>
+        <p className="text-2xl text-center text-zinc-600 mt-1 mb-10">
           Honest reviews from our previous guests through platform including
           Airbnb.
         </p>
